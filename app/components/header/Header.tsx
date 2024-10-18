@@ -85,12 +85,16 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out`}
-      style={{ height: `${headerHeight}px` }}
+      className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${
+        isScrolled ? 'z-10 h-16' : 'z-50'
+      }`}
+      style={{ height: isScrolled ? '64px' : `${headerHeight}px` }}
     >
       {isHomePage && (
-        <div className="absolute inset-0 transition-opacity duration-300 ease-in-out"
-             style={{ opacity: isScrolled ? 0 : 1 }}>
+        <div 
+          className="absolute inset-0 transition-opacity duration-300 ease-in-out"
+          style={{ opacity: isScrolled ? 0 : 1 }}
+        >
           <Image
             src="/images/band.jpg"
             alt="Band Background"
@@ -99,6 +103,7 @@ export default function Header() {
             style={{ objectFit: "cover", objectPosition: "top" }}
             quality={100}
             priority
+            className="sm:object-contain"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
@@ -144,10 +149,8 @@ export default function Header() {
 
         {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
 
-        {/* Conditional rendering for homepage content */}
-        {isHomePage && (
-          <div className="flex-grow flex flex-col items-center justify-center pb-8 transition-opacity duration-300 ease-in-out"
-               style={{ opacity: isScrolled ? 0 : 1 }}>
+        {isHomePage && !isScrolled && (
+          <div className="flex-grow flex flex-col items-center justify-center pb-8">
             <Image
               src="/icons/band-name.png"
               alt="Band Name"
