@@ -3,36 +3,48 @@ import { FaInstagram, FaFacebook, FaTiktok, FaYoutube, FaSpotify } from "react-i
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center">
-      <Image
-        src="/images/band.jpg"
-        alt="Band Background"
-        layout="fill"
-        objectFit="contain"
-        className="z-0"
-      />
-      <div className="absolute z-10 text-center text-white">
-        <h1 className="text-4xl font-bold mb-4">Strange Seeds</h1>
-        <Image src="/images/logo.png" alt="Band Logo" width={300} height={100} />
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center">
+      <div className="w-full aspect-[19/12] overflow-hidden relative">
+        <Image
+          src="/images/band.jpg"
+          alt="Band background"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center top" }}
+          quality={100}
+          priority
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+      </div>
+      <div className="absolute z-10 text-center text-white p-4 sm:p-8">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Strange Seeds</h1>
+        <div className="relative w-64 h-24 sm:w-80 sm:h-28 mx-auto mb-4">
+          <Image
+            src="/images/logo.png"
+            alt="Band Logo"
+            fill
+            style={{ objectFit: "contain" }}
+          />
+        </div>
         <div className="flex justify-center space-x-4 mt-4">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition">
-            <FaInstagram size={30} />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition">
-            <FaFacebook size={30} />
-          </a>
-          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition">
-            <FaTiktok size={30} />
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition">
-            <FaYoutube size={30} />
-          </a>
-          <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition">
-            <FaSpotify size={30} />
-          </a>
+          {[
+            { icon: FaInstagram, href: "https://instagram.com" },
+            { icon: FaFacebook, href: "https://facebook.com" },
+            { icon: FaTiktok, href: "https://tiktok.com" },
+            { icon: FaYoutube, href: "https://youtube.com" },
+            { icon: FaSpotify, href: "https://spotify.com" },
+          ].map(({ icon: Icon, href }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:scale-110 hover:text-red-500 transition "
+            >
+              <Icon size={24} />
+            </a>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-

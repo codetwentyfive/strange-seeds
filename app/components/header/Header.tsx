@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center p-4 bg-background shadow">
+    <header className="flex justify-between items-center p-4 bg-transparent shadow">
       <Link href="/">
         <Image src="/logo.png" alt="Logo" width={150} height={50} />
       </Link>
