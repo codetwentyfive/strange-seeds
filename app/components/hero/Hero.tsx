@@ -3,25 +3,27 @@ import { FaInstagram, FaFacebook, FaTiktok, FaYoutube, FaSpotify } from "react-i
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-16">
       <div className="w-full aspect-[19/12] overflow-hidden relative">
         <Image
           src="/images/band.jpg"
           alt="Band background"
           fill
+          sizes="100vw"
           style={{ objectFit: "cover", objectPosition: "center top" }}
           quality={100}
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       </div>
-      <div className="absolute z-10 text-center text-white p-4 sm:p-8">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white p-4 sm:p-8">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">Strange Seeds</h1>
         <div className="relative w-64 h-24 sm:w-80 sm:h-28 mx-auto mb-4">
           <Image
             src="/images/logo.png"
             alt="Band Logo"
             fill
+            sizes="(max-width: 640px) 256px, 320px"
             style={{ objectFit: "contain" }}
           />
         </div>
@@ -38,7 +40,7 @@ export default function Hero() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 hover:text-red-500 transition "
+              className="transform hover:scale-110 hover:text-red-500 transition"
             >
               <Icon size={24} />
             </a>
