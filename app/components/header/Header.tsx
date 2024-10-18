@@ -50,27 +50,27 @@ export default function Header() {
   const socialLinks = [
     {
       icon: FaSpotify,
-      href: "https://open.spotify.com/artist/1vSVbOqYbg9UA1AaOALKab?si=uTkNfn3YRaKGe2xSkZlBsw",
+      href: "https://open.spotify.com/artist/3gwMCAZVLTLsYL2SFOXMYR",
       label: "Spotify",
     },
     {
       icon: FaApple,
-      href: "https://music.apple.com/us/artist/thestrangeseeds/1586917108",
+      href: "https://music.apple.com/us/artist/the-strange-seeds/1542647590",
       label: "Apple Music",
     },
-    {
-      icon: FaAmazon,
-      href: "https://music.amazon.com/artists/B0D8RM4BB6/thestrangeseeds",
-      label: "Amazon",
-    },
+    // {
+    //   icon: FaAmazon,
+    //   href: "https://music.amazon.com/artists/B0D8RM4BB6/thestrangeseeds",
+    //   label: "Amazon",
+    // },
     {
       icon: FaYoutube,
-      href: "https://www.youtube.com/channel/UCC5AEweKnvMIHgxrVcLFsRg/featured",
+      href: "https://www.youtube.com/@thestrangeseeds129",
       label: "YouTube",
     },
     {
       icon: FaInstagram,
-      href: "https://instagram.com/thestrangeseeds",
+      href: "https://www.instagram.com/the.strange.seeds/",
       label: "Instagram",
     },
     {
@@ -78,11 +78,11 @@ export default function Header() {
       href: "https://www.facebook.com/thestrangeseeds",
       label: "Facebook",
     },
-    {
-      icon: FaTiktok,
-      href: "https://www.tiktok.com/@thestrangeseeds",
-      label: "TikTok",
-    },
+    // {
+    //   icon: FaTiktok,
+    //   href: "https://www.tiktok.com/@thestrangeseeds",
+    //   label: "TikTok",
+    // },
   ];
 
   const navigationLinks = [
@@ -90,7 +90,7 @@ export default function Header() {
     { href: "/music", label: "Music" },
     { href: "/contact", label: "Contact" },
     { href: "/press", label: "Press" },
-    { href: "https://merch.thestrangeseeds.com/", label: "Store", external: true },
+    { href: "https://thestrangeseeds.bandcamp.com/merch", label: "Store", external: true },
   ];
 
   return (
@@ -106,16 +106,29 @@ export default function Header() {
             isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
           }`}
         >
-          <Image
-            src="/images/band.jpg"
-            alt="Band Background"
-            fill
-            sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: "top" }}
-            quality={100}
-            priority
-            className="sm:object-contain"
-          />
+          <div className="hidden sm:block">
+            <Image
+              src="/images/band.jpg"
+              alt="Band Background"
+              fill
+              sizes="100vw"
+              style={{ objectFit: "cover", objectPosition: "top" }}
+              quality={100}
+              priority
+              className="sm:object-contain"
+            />
+          </div>
+          <div className="block sm:hidden">
+            <Image
+              src="/images/mobile-background.jpg"
+              alt="Mobile Background"
+              fill
+              sizes="100vw"
+              style={{ objectFit: "cover", objectPosition: "top" }}
+              quality={100}
+              priority
+            />
+          </div>
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
       )}
@@ -134,7 +147,7 @@ export default function Header() {
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex space-x-4 pr-5">
             {navigationLinks.map((link, index) => (
               <Link
                 key={index}
@@ -167,9 +180,9 @@ export default function Header() {
               alt="Band Name"
               width={300}
               height={100}
-              className="mb-8 filter invert transition-all duration-500 hover:animate-bounce"
+              className="mb-8 filter invert transition-all duration-500 hover:animate-bounce sm:mt-0 mt-4"
             />
-            <div className="flex justify-center space-x-6 mt-[18rem]">
+            <div className="flex justify-center space-x-6 mt-[5rem] sm:mt-[15rem]  ">
               {socialLinks.map(({ icon: Icon, href, label }, index) => (
                 <a
                   key={index}
