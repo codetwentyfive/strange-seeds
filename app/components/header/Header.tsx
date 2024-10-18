@@ -98,12 +98,13 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${
         isScrolled ? 'z-10 h-16' : 'z-50'
       }`}
-      style={{ height: `${headerHeight}px` }}
+      style={{ height: isScrolled ? '64px' : `${headerHeight}px` }}
     >
       {isHomePage && (
         <div 
-          className="absolute inset-0 transition-opacity duration-300 ease-in-out"
-          style={{ opacity: isScrolled ? 0 : 1 }}
+          className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+            isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+          }`}
         >
           <Image
             src="/images/band.jpg"
@@ -119,7 +120,7 @@ export default function Header() {
         </div>
       )}
 
-      <div className="relative z-10 flex flex-col h-full">
+      <div className={`relative z-10 flex flex-col h-full`}>
         <div className="flex justify-between items-center w-full p-4 bg-transparent">
           {/* Band Logo */}
           <Link href="/" className="flex-shrink-0 pl-5">
