@@ -18,6 +18,7 @@ import {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [headerHeight, setHeaderHeight] = useState(64);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -30,11 +31,20 @@ export default function Header() {
       setScrollY(window.scrollY);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const handleResize = () => {
+      setHeaderHeight(isHomePage ? Math.max(64, window.innerHeight - scrollY) : 64);
+    };
 
-  const headerHeight = isHomePage ? Math.max(64, window.innerHeight - scrollY) : 64;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isHomePage, scrollY]);
+
   const isScrolled = scrollY > 50;
 
   const socialLinks = [
@@ -88,7 +98,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${
         isScrolled ? 'z-10 h-16' : 'z-50'
       }`}
-      style={{ height: isScrolled ? '64px' : `${headerHeight}px` }}
+      style={{ height: `${headerHeight}px` }}
     >
       {isHomePage && (
         <div 
