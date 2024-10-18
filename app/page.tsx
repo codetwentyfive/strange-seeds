@@ -1,5 +1,5 @@
 import Header from "./components/header/Header"; // Correct for default export
-import Hero from "./components/hero/Hero";
+//import Hero from "./components/hero/Hero";
 import UpcomingGigs from "./components/gigs/UpcomingGigs";
 import SpotifyPreview from "./components/music/SpotifyPreview";
 import YouTubeEmbed from "./components/music/YouTubeEmbed";
