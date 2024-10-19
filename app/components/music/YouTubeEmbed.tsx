@@ -4,7 +4,7 @@ interface YouTubeEmbedProps {
 
 export function YouTubeEmbed({ videoId }: YouTubeEmbedProps) {
   return (
-    <div className="w-full aspect-video">
+    <div className="w-full aspect-video rounded-3xl overflow-hidden shadow-md">
       <iframe
         src={`https://www.youtube.com/embed/${videoId}`}
         title="YouTube video player"
