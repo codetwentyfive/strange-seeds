@@ -2,7 +2,7 @@
   {
     "id": 1,
     "date": "2024-05-20",
-    "venue": "The Music Hall",
+    "venue": "The Mos Eisley Cantina",
     "city": "New York",
     "rsvpLink": "https://example.com/rsvp1",
     "ticketsLink": "https://example.com/tickets1"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "date": "2024-06-15",
-    "venue": "Downtown Arena",
+    "venue": "The Upside Down",
     "city": "Los Angeles",
     "rsvpLink": "https://example.com/rsvp2",
     "ticketsLink": "https://example.com/tickets2"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "date": "2024-07-10",
-    "venue": "Grand Theater",
+    "venue": "Hogwarts Great Hall",
     "city": "Chicago",
     "rsvpLink": "https://example.com/rsvp3",
     "ticketsLink": "https://example.com/tickets3"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "date": "2024-08-05",
-    "venue": "Open Air Stage",
+    "venue": "The Holodeck",
     "city": "San Francisco",
     "rsvpLink": "https://example.com/rsvp4",
     "ticketsLink": "https://example.com/tickets4"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "date": "2024-09-12",
-    "venue": "City Park",
+    "venue": "The Batcave",
     "city": "Boston",
     "rsvpLink": "https://example.com/rsvp5",
     "ticketsLink": "https://example.com/tickets5"
@@ -42,10 +42,9 @@
   {
     "id": 6,
     "date": "2024-10-20",
-    "venue": "The Edge",
+    "venue": "The TARDIS",
     "city": "Seattle",
     "rsvpLink": "https://example.com/rsvp6",
     "ticketsLink": "https://example.com/tickets6"
   }
 ]
-

@@ -18,7 +18,12 @@ export default function UpcomingGigs() {
   useEffect(() => {
     // Fetch upcoming gigs data
     fetch('/api/gigs/upcoming')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
         setGigs(data);
         setIsLoading(false);
@@ -34,18 +39,20 @@ export default function UpcomingGigs() {
   }
 
   return (
-    <section className="py-12 bg-background">
-      <h2 className="text-2xl font-bold text-center mb-8">Upcoming Gigs</h2>
+    <section className="py-12 bg-background mt-12">
+      <h2 className="text-3xl font-bold text-center mb-8">Upcoming Gigs</h2>
       <div className="max-w-4xl mx-auto grid gap-6">
         {gigs.map((gig) => (
-          <div key={gig.id} className="p-4 border rounded shadow">
-            <h3 className="text-xl font-semibold">{gig.venue}, {gig.city}</h3>
-            <p className="text-gray-600">{gig.date}</p>
-            <div className="mt-4 flex space-x-4">
-              <a href={gig.rsvpLink} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-foreground text-background rounded hover:bg-[#383838] transition">
+          <div key={gig.id} className="p-4 border rounded shadow flex flex-col">
+            <div>
+              <h3 className="text-2xl font-semibold">{gig.venue}, {gig.city}</h3>
+              <p className="text-pretty text-gray-600">{gig.date}</p>
+            </div>
+            <div className="mt-4 flex justify-end space-x-2">
+              <a href={gig.rsvpLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm bg-transparent border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
                 RSVP
               </a>
-              <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-foreground text-background rounded hover:bg-[#383838] transition">
+              <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm bg-transparent border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
                 Tickets
               </a>
             </div>
