@@ -1,15 +1,18 @@
-export default function YouTubeEmbed() {
+interface YouTubeEmbedProps {
+  videoId: string;
+}
+
+export function YouTubeEmbed({ videoId }: YouTubeEmbedProps) {
   return (
-    <section className="py-12 bg-background flex justify-center">
-      <div className="w-full max-w-3xl aspect-video">
-        <iframe
-          src="https://www.youtube.com/embed/g42-TNEINWM"
-          title="YouTube video player"
-          frameBorder="0"
-          allowFullScreen
-          className="w-full h-full"
-        ></iframe>
-      </div>
-    </section>
+    <div className="w-full aspect-video">
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      ></iframe>
+    </div>
   );
 }

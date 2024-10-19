@@ -1,8 +1,12 @@
-export default function SpotifyPreview() {
+interface SpotifyPreviewProps {
+  artistId?: string;
+}
+
+export function SpotifyPreview({ artistId = "3gwMCAZVLTLsYL2SFOXMYR" }: SpotifyPreviewProps) {
   return (
-    <section className="py-12 bg-background flex justify-center">
+    <section className="flex justify-center">
       <iframe
-        src="https://open.spotify.com/embed/artist/3gwMCAZVLTLsYL2SFOXMYR"
+        src={`https://open.spotify.com/embed/artist/${artistId}`}
         width="100%"
         height="352"
         frameBorder="0"

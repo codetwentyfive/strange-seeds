@@ -1,8 +1,7 @@
 import Header from "./components/header/Header"; // Correct for default export
 //import Hero from "./components/hero/Hero";
 import UpcomingGigs from "./components/gigs/UpcomingGigs";
-import SpotifyPreview from "./components/music/SpotifyPreview";
-import YouTubeEmbed from "./components/music/YouTubeEmbed";
+import Music from './components/music/Music';
 import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
 import ContactInfo from "./components/contact/ContactInfo";
@@ -15,8 +14,7 @@ export default function Home() {
         {/* Your content here */}
         <About />
         <UpcomingGigs />
-        <SpotifyPreview />
-        <YouTubeEmbed />
+        <Music />
         <ContactInfo />
       </main>
       <Footer />
