@@ -40,7 +40,7 @@ export default function UpcomingGigs() {
 
   return (
     <section className="py-12 bg-background mt-28 sm:mt-28 md:mt-16 lg:mt-20">
-      <h2 className="text-3xl font-bold text-center mb-8">Upcoming Gigs</h2>
+      <h2 className="font-display text-4xl mb-8 text-center">Upcoming Gigs</h2>
       <div className="max-w-4xl mx-auto grid gap-6">
         {gigs.map((gig) => (
           <div key={gig.id} className="p-4 border rounded shadow flex flex-col">

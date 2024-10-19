@@ -21,7 +21,7 @@ export default function Music() {
       <div className="space-y-12">
         {videos.map((video) => (
           <div key={video.id} className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-center">{video.title}</h3>
+            <h3 className="font-display text-4xl mb-4 text-center">{video.title}</h3>
             <YouTubeEmbed videoId={video.id} />
           </div>
         ))}

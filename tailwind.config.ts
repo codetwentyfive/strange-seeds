@@ -11,6 +11,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["var(--font-rubik)", "sans-serif"],
+        mono: ["var(--font-rubik-mono-one)", "monospace"],
+        display: ["var(--font-rubik-dirt)", "cursive"],
+      },
     },
   },
   plugins: [],

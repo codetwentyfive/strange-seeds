@@ -26,10 +26,10 @@ export default function PressContent() {
             <h2 className="text-2xl font-semibold mb-4 ">Contact</h2>
             <p>For press inquiries, please contact:</p>
             <p className="mt-2">
-              <strong>Email:</strong> <a href="mailto:press@thestrangeseeds.com" className="text-blue-600 hover:underline">press@thestrangeseeds.com</a>
+              <strong>Email:</strong> <a href="mailto:info@thestrangeseeds.com" className="text-blue-600 hover:underline">info@thestrangeseeds.com</a>
             </p>
             <p>
-              <strong>Phone:</strong> +49 (0) 170 356 255 8
+              <strong>Phone:</strong><a href="tel:+491703562558" className="text-blue-600 hover:underline">+49 (0) 170 356 255 8</a>
             </p>
           </div>
         </div>
