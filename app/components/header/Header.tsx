@@ -134,7 +134,7 @@ export default function Header() {
       <div className={`relative z-10 flex flex-col h-full`}>
         <div className="flex justify-between items-center w-full p-4 bg-transparent">
           {/* Band Logo */}
-          <Link href="/" className="flex-shrink-0 pl-5">
+          <Link href="/" className={`flex-shrink-0 pl-5 ${isScrolled ? 'block' : 'hidden md:block'}`}>
             <Image
               src="/icons/logo-icon.png"
               alt="Band Logo"
@@ -161,7 +161,7 @@ export default function Header() {
 
           {/* Hamburger Menu for Mobile */}
           <button
-            className="md:hidden text-white hover:text-gray-300"
+            className={`md:hidden text-white hover:text-gray-300 ${isScrolled ? 'block' : 'hidden'}`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
