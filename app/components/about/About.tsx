@@ -1,10 +1,80 @@
+"use client";
+
 import Image from "next/image";
+import { useState, useEffect } from "react";
+
+const images = [
+  "/images/about-1.jpeg",
+  "/images/about-2.jpeg",
+  "/images/about-3.jpeg",
+  "/images/about-4.jpeg",
+  "/images/about-5.jpg",
+  "/images/about-6.jpg",
+  "/images/about-7.JPG",
+  "/images/about-8.jpg",
+  "/images/about-9.jpg",
+];
 
 export default function About() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
     <section className="pt-32 pb-12 mt-16 bg-background flex flex-col md:flex-row items-center max-w-4xl mx-auto lg:pt-32">
-      <div className="md:w-1/2">
-        <Image src="/images/about-2.jpeg" alt="Band Photo" width={500} height={500} className="rounded shadow" />
+      <div className="md:w-1/2 relative h-[500px]">
+        {images.map((src, index) => (
+          <Image
+            key={src}
+            src={src}
+            alt={`Band Photo ${index + 1}`}
+            fill
+            className={`rounded-3xl shadow object-cover transition-opacity duration-500 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            priority={index === 0}
+          />
+        ))}
+        <button
+          onClick={handlePrevImage}
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+          aria-label="Previous image"
+        >
+          &#8249;
+        </button>
+        <button
+          onClick={handleNextImage}
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
+          aria-label="Next image"
+        >
+          &#8250;
+        </button>
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentImageIndex ? "bg-white" : "bg-gray-400"
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
       <div className="md:w-1/2 mt-6 md:mt-0 md:pl-8">
         <h2 className="font-display text-4xl mb-4 text-center">About The Strange Seeds</h2>
