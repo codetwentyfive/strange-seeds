@@ -5,7 +5,7 @@ export default function ContactInfo() {
       <p><a href="mailto:info@thestrangeseeds.com" className="text-foreground underline text-xl">info@thestrangeseeds.com</a></p>
       <h3 className="text-3xl font-bold mt-8 mb-2">Telephone</h3>
       <p className="mt-2 text-xl">Patrick Knödlseder</p>
-      <p><a href="tel:+49(0)170356255" className="text-foreground underline text-xl">+49 (0) 170 356 255 8</a></p>
+      <p><a href="tel:+49(0)1703562558" className="text-foreground underline text-xl">+49 (0) 170 356 255 8</a></p>
     </div>
   );
 }
