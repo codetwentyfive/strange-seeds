@@ -9,7 +9,7 @@ const navigationLinks = [
   { href: "/music", label: "Music" },
   { href: "/contact", label: "Contact" },
   { href: "/press", label: "Press" },
-  { href: "https://the-band-feel.redstarmerch.com/", label: "Store", external: true },
+  { href: "https://thestrangeseeds.bandcamp.com/merch", label: "Store", external: true },
 ];
 
 export default function MobileMenu({ onClose }: MobileMenuProps) {

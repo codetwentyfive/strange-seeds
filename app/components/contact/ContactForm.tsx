@@ -27,7 +27,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="md:w-1/2">
+    <form onSubmit={handleSubmit} className="md:w-1/2 mx-auto">
       <div className="mb-4">
         <label htmlFor="name" className="block mb-1">Name</label>
         <input
