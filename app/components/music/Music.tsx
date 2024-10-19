@@ -7,11 +7,11 @@ interface VideoData {
 }
 
 const videos: VideoData[] = [
-  { id: "tj2gDTGMWV8", title: "Ava Max - Sweet but Psycho" },
-  { id: "g42-TNEINWM", title: "Ava Max - Kings & Queens" },
-  { id: "dz7g9Wx2n1Q", title: "Ava Max - Salt" },
-  { id: "8_G6XjQHbTc", title: "Ava Max - Maybe You're The Problem" },
-  { id: "n3kiW1wHgts", title: "Ava Max - Million Dollar Baby" },
+    { id: "g42-TNEINWM", title: "Mary Jane" },
+    { id: "8_G6XjQHbTc", title: "Gardens of Marakesh" },
+    { id: "tj2gDTGMWV8", title: "Mr. Mojo Man live at Rathaus Innenhof Passau" },
+    { id: "n3kiW1wHgts", title: "Plant" },
+    { id: "dz7g9Wx2n1Q", title: "Backcountry Exile (Live)" },
 ];
 
 export default function Music() {
@@ -21,7 +21,7 @@ export default function Music() {
       <div className="space-y-12">
         {videos.map((video) => (
           <div key={video.id} className="max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-center">{video.title}</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center">{video.title}</h3>
             <YouTubeEmbed videoId={video.id} />
           </div>
         ))}
