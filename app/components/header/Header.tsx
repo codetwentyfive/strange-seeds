@@ -94,9 +94,9 @@ export default function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out pb-10 ${
-        isScrolled ? 'z-10 h-16' : 'z-50'
+        isScrolled || !isHomePage ? 'z-10 h-16' : 'z-50'
       }`}
-      style={{ height: isScrolled ? '64px' : `${headerHeight}px` }}
+      style={{ height: isScrolled || !isHomePage ? '64px' : `${headerHeight}px` }}
     >
       {isHomePage && (
         <div 
@@ -134,7 +134,7 @@ export default function Header() {
       <div className={`relative z-10 flex flex-col h-full`}>
         <div className="flex justify-between items-center w-full p-4 bg-transparent">
           {/* Band Logo */}
-          <Link href="/" className={`flex-shrink-0 pl-5 ${isScrolled ? 'block' : 'hidden md:block'}`}>
+          <Link href="/" className={`flex-shrink-0 pl-5 ${isScrolled || !isHomePage ? 'block' : 'hidden md:block'}`}>
             <Image
               src="/icons/logo-icon.png"
               alt="Band Logo"
@@ -161,15 +161,17 @@ export default function Header() {
 
           {/* Hamburger Menu for Mobile */}
           <button
-            className={`md:hidden text-white hover:text-gray-300 ${isScrolled ? 'block' : 'hidden'}`}
+            className={`md:hidden text-white hover:text-gray-300 text-3xl p-2 ${isScrolled || !isHomePage ? 'block' : 'hidden'}`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? "✖" : "☰"}
+            {isMenuOpen ? '✖' : '☰'}
           </button>
         </div>
 
-        {isMenuOpen && <MobileMenu onClose={() => setIsMenuOpen(false)} />}
+        {isMenuOpen && (
+          <MobileMenu onClose={() => setIsMenuOpen(false)} />
+        )}
 
         {isHomePage && !isScrolled && (
           <div className="flex-grow flex flex-col items-center justify-center pb-8">

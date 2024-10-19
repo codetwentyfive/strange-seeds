@@ -16,7 +16,7 @@ const videos: VideoData[] = [
 
 export default function Music() {
   return (
-    <div className="space-y-16 py-12">
+    <div className="space-y-16 py-12 mt-28 sm:mt-28 md:mt-16 lg:mt-20">
       <SpotifyPreview />
       <div className="space-y-12">
         {videos.map((video) => (
