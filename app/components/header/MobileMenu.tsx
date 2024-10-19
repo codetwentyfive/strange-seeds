@@ -4,15 +4,29 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
+const navigationLinks = [
+  { href: "/gigs", label: "Gigs" },
+  { href: "/music", label: "Music" },
+  { href: "/contact", label: "Contact" },
+  { href: "/press", label: "Press" },
+  { href: "https://the-band-feel.redstarmerch.com/", label: "Store", external: true },
+];
+
 export default function MobileMenu({ onClose }: MobileMenuProps) {
   return (
     <div className="fixed top-16 left-0 w-screen bg-black bg-opacity-90 shadow-md flex flex-col items-center space-y-4 py-4 z-50">
-      <Link href="/" className="w-full text-center text-white hover:text-gray-300" onClick={onClose}>Home</Link>
-      <Link href="/gigs" className="w-full text-center text-white hover:text-gray-300" onClick={onClose}>Upcoming Gigs</Link>
-      <Link href="/merch" className="w-full text-center text-white hover:text-gray-300" onClick={onClose}>Merch</Link>
-      <Link href="/music" className="w-full text-center text-white hover:text-gray-300" onClick={onClose}>Music</Link>
-      <Link href="/about" className="w-full text-center text-white hover:text-gray-300" onClick={onClose}>About</Link>
-      <Link href="/contact" className="w-full text-center text-white hover:text-gray-300" onClick={onClose}>Contact</Link>
+      {navigationLinks.map((link, index) => (
+        <Link
+          key={index}
+          href={link.href}
+          className="w-full text-center text-white hover:text-gray-300 text-lg"
+          target={link.external ? "_blank" : "_self"}
+          rel={link.external ? "noopener noreferrer" : undefined}
+          onClick={onClose}
+        >
+          {link.label}
+        </Link>
+      ))}
     </div>
   );
 }

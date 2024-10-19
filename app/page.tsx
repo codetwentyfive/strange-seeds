@@ -12,11 +12,11 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        {/* <Hero /> */}
+        {/* Your content here */}
+        <About />
         <UpcomingGigs />
         <SpotifyPreview />
         <YouTubeEmbed />
-        <About />
         <ContactInfo />
       </main>
       <Footer />

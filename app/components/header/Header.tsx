@@ -8,11 +8,9 @@ import MobileMenu from "./MobileMenu";
 import {
   FaInstagram,
   FaFacebook,
-  FaTiktok,
   FaYoutube,
   FaSpotify,
   FaApple,
-  FaAmazon,
 } from "react-icons/fa";
 
 export default function Header() {
@@ -95,7 +93,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out pb-10 ${
         isScrolled ? 'z-10 h-16' : 'z-50'
       }`}
       style={{ height: isScrolled ? '64px' : `${headerHeight}px` }}
@@ -182,7 +180,7 @@ export default function Header() {
               height={100}
               className="mb-8 filter invert transition-all duration-500 hover:animate-bounce sm:mt-0 mt-4"
             />
-            <div className="flex justify-center space-x-6 mt-[5rem] sm:mt-[15rem]  ">
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-8 sm:mt-16 mx-auto px-4 w-full max-w-screen-lg">
               {socialLinks.map(({ icon: Icon, href, label }, index) => (
                 <a
                   key={index}
@@ -192,7 +190,7 @@ export default function Header() {
                   aria-label={label}
                   className="text-white hover:text-red-500 transform hover:scale-110 transition-all duration-300"
                 >
-                  <Icon size={60} />
+                  <Icon className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14" />
                 </a>
               ))}
             </div>
