@@ -35,8 +35,8 @@ export default function About() {
   };
 
   return (
-    <section className="pt-32 pb-12 mt-16 bg-background flex flex-col md:flex-row items-center max-w-4xl mx-auto lg:pt-32">
-      <div className="md:w-1/2 relative h-[500px]">
+    <section className="pt-16 pb-8 mt-16 bg-background flex flex-col items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-24">
+      <div className="w-full max-w-md relative aspect-square mb-8 lg:mb-0 lg:max-w-lg">
         {images.map((src, index) => (
           <Image
             key={src}
@@ -68,7 +68,7 @@ export default function About() {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-2 h-2 rounded-full ${
                 index === currentImageIndex ? "bg-white" : "bg-gray-400"
               }`}
               aria-label={`Go to image ${index + 1}`}
@@ -76,9 +76,9 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="md:w-1/2 mt-6 md:mt-0 md:pl-8">
-        <h2 className="font-display text-4xl mb-4 text-center">About The Strange Seeds</h2>
-        <p className="font-sans text-pretty text-lg text-center leading-relaxed">
+      <div className="w-full mt-6 lg:mt-0 lg:pl-8">
+        <h2 className="font-display text-3xl sm:text-4xl mb-4 text-center">About The Strange Seeds</h2>
+        <p className="font-sans text-pretty text-base sm:text-lg text-center leading-relaxed">
           In a dimly lit old tobacco factory, The Strange Seeds stumbled upon a 
           forgotten synthesizer that unleashed otherworldly frequencies.
           <br />
