@@ -35,7 +35,7 @@ export default function About() {
   };
 
   return (
-    <section className="pt-16 pb-8 mt-16 bg-background flex flex-col items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-24">
+    <section className="pt-16 pb-8 mt-24 bg-background flex flex-col items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-24">
       <div className="w-full max-w-md relative aspect-square mb-8 lg:mb-0 lg:max-w-lg">
         {images.map((src, index) => (
           <Image
@@ -76,8 +76,8 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="w-full mt-6 lg:mt-0 lg:pl-8">
-        <h2 className="font-display text-3xl sm:text-4xl mb-4 text-center">About The Strange Seeds</h2>
+      <div className="w-full mt-6 lg:mt-8 lg:pl-8">
+        <h2 className="font-display font-bold text-3xl sm:text-4xl mb-4 text-center">About The Strange Seeds</h2>
         <p className="font-sans text-pretty text-base sm:text-lg text-center leading-relaxed">
           In a dimly lit old tobacco factory, The Strange Seeds stumbled upon a 
           forgotten synthesizer that unleashed otherworldly frequencies.
