@@ -22,6 +22,15 @@ const rubik = Rubik({
 export const metadata: Metadata = {
   title: "Strange Seeds",
   description: "Official website of Strange Seeds",
+  icons: [
+    { rel: "icon", url: "/favicon.ico" },
+    { rel: "icon", url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    { rel: "icon", url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
+    { rel: "manifest", url: "/site.webmanifest" },
+  ],
+  themeColor: "#ffffff", // Set this to match your site's theme color
+  viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
 };
 
 export default function RootLayout({
