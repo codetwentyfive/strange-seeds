@@ -140,19 +140,8 @@ export default function Header() {
       )}
 
       <div className={`relative z-10 flex flex-col h-full`}>
-        <div className="flex justify-between items-center w-full p-4 bg-transparent">
-          {/* Band Logo */}
-          <Link href="/" className={`flex-shrink-0 pl-5 ${isScrolled || !isHomePage ? 'block' : 'hidden md:block'}`}>
-            <Image
-              src="/icons/logo-icon.png"
-              alt="Band Logo"
-              width={90}
-              height={90}
-              className="transition-transform duration-300 ease-in-out hover:scale-110"
-            />
-          </Link>
-
-          {/* Navigation */}
+        <div className="flex justify-end items-center w-full p-4 bg-transparent">
+          {/* Navigation for larger screens */}
           <nav className="hidden md:flex space-x-4 pr-5">
             {navigationLinks.map((link, index) => (
               <Link
@@ -169,7 +158,7 @@ export default function Header() {
 
           {/* Hamburger Menu for Mobile */}
           <button
-            className={`md:hidden text-white hover:text-gray-300 text-3xl p-2 ${isScrolled || !isHomePage ? 'block' : 'hidden'}`}
+            className={`md:hidden text-black hover:text-gray-700 text-3xl p-2 bg-white rounded-full ${isScrolled || !isHomePage ? 'block' : 'hidden'}`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
