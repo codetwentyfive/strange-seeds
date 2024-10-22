@@ -8,10 +8,7 @@ interface VideoData {
 
 const videos: VideoData[] = [
     { id: "g42-TNEINWM", title: "Mary Jane" },
-    { id: "8_G6XjQHbTc", title: "Gardens of Marakesh" },
-    { id: "tj2gDTGMWV8", title: "Mr. Mojo Man (Live)" },
     { id: "n3kiW1wHgts", title: "Plant" },
-    { id: "dz7g9Wx2n1Q", title: "Backcountry Exile (Live)" },
 ];
 
 export default function Music() {

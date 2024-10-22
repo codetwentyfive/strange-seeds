@@ -11,6 +11,8 @@ import {
   FaYoutube,
   FaSpotify,
   FaApple,
+  FaTiktok,
+  FaBandcamp,
 } from "react-icons/fa";
 
 export default function Header() {
@@ -56,6 +58,11 @@ export default function Header() {
       href: "https://music.apple.com/us/artist/the-strange-seeds/1542647590",
       label: "Apple Music",
     },
+    {
+      icon: FaBandcamp,
+      href: "https://thestrangeseeds.bandcamp.com/",
+      label: "Bandcamp",
+    },
     // {
     //   icon: FaAmazon,
     //   href: "https://music.amazon.com/artists/B0D8RM4BB6/thestrangeseeds",
@@ -76,11 +83,12 @@ export default function Header() {
       href: "https://www.facebook.com/thestrangeseeds",
       label: "Facebook",
     },
-    // {
-    //   icon: FaTiktok,
-    //   href: "https://www.tiktok.com/@thestrangeseeds",
-    //   label: "TikTok",
-    // },
+    {
+      icon: FaTiktok,
+      href: "https://www.tiktok.com/@the.strange.seeds",
+      label: "TikTok",
+    },
+
   ];
 
   const navigationLinks = [

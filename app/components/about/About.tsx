@@ -27,7 +27,9 @@ export default function About() {
   }, []);
 
   const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   const handleNextImage = () => {
@@ -77,13 +79,26 @@ export default function About() {
         </div>
       </div>
       <div className="w-full mt-6 lg:mt-8 lg:pl-8">
-        <h2 className="font-display font-bold text-3xl sm:text-4xl mb-4 text-center">About The Strange Seeds</h2>
+        <h2 className="font-display font-bold text-3xl sm:text-4xl mb-4 text-center">
+          About The Strange Seeds
+        </h2>
         <p className="font-sans text-pretty text-base sm:text-lg text-center leading-relaxed">
-          In a dimly lit old tobacco factory, The Strange Seeds stumbled upon a 
-          forgotten synthesizer that unleashed otherworldly frequencies.
+          Formed in 2020 The Strange Seeds, consisting of Jacob James Bryden
+          (dr.), Valentin Michetschläger (org.), Patrick Knödlseder (git.) and
+          Florian Hackl (voc.,b), deliver steady heavy blues rock out on the
+          road . Since their inception, they’ve recorded their debut album
+          "Plant", "The Raw Takes"- EP and their second studio album "Grow", to
+          be released in early Summer 2024.
+          <br /> 
           <br />
-          Harnessing this sonic alchemy, they crafted a sound that 
-          transcended genres and captivated listeners worldwide. 
+          Soundwise, The Strange Seeds merge heavy drum rhythms with thunderlike
+          basslines and sweet keys with roaring guitar solos, underscored it all
+          with vocals straight from the heart.
+          <br />
+          <br />
+          With more than 80 live gigs under their belt, The Strange Seeds enjoy
+          cherishing this sonic amalgamation in tender jam sessions when live on
+          stage.
         </p>
       </div>
     </section>
