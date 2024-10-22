@@ -13,22 +13,28 @@ import {
   FaTiktok,
   FaBandcamp,
 } from "react-icons/fa";
+import Link from 'next/link';
 
 function ScrollLink({ href, children, className, onClick }: { href: string; children: React.ReactNode; className?: string; onClick?: () => void }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const targetId = href.replace('/#', '');
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    if (isHomePage && href.startsWith('/#')) {
+      e.preventDefault();
+      const targetId = href.replace('/#', '');
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     if (onClick) onClick();
   };
 
   return (
-    <a href={href} className={className} onClick={handleClick}>
+    <Link href={href} className={className} onClick={handleClick}>
       {children}
-    </a>
+    </Link>
   );
 }
 
