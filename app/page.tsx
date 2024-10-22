@@ -11,11 +11,16 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        {/* Your content here */}
         <About />
-        <UpcomingGigs />
-        <Music />
-        <ContactInfo />
+        <section id="gigs">
+          <UpcomingGigs />
+        </section>
+        <section id="music">
+          <Music />
+        </section>
+        <section id="contact">
+          <ContactInfo />
+        </section>
       </main>
       <Footer />
     </div>

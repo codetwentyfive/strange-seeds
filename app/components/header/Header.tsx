@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -14,6 +13,24 @@ import {
   FaTiktok,
   FaBandcamp,
 } from "react-icons/fa";
+
+function ScrollLink({ href, children, className, onClick }: { href: string; children: React.ReactNode; className?: string; onClick?: () => void }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = href.replace('/#', '');
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (onClick) onClick();
+  };
+
+  return (
+    <a href={href} className={className} onClick={handleClick}>
+      {children}
+    </a>
+  );
+}
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,9 +109,9 @@ export default function Header() {
   ];
 
   const navigationLinks = [
-    { href: "/gigs", label: "Gigs" },
-    { href: "/music", label: "Music" },
-    { href: "/contact", label: "Contact" },
+    { href: "/#gigs", label: "Gigs" },
+    { href: "/#music", label: "Music" },
+    { href: "/#contact", label: "Contact" },
     { href: "/press", label: "Press" },
     { href: "https://thestrangeseeds.bandcamp.com/merch", label: "Store", external: true },
   ];
@@ -144,15 +161,25 @@ export default function Header() {
           {/* Navigation for larger screens */}
           <nav className="hidden md:flex space-x-4 pr-5">
             {navigationLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className="text-white hover:text-gray-300 text-lg font-semibold transition-colors duration-300"
-                target={link.external ? "_blank" : "_self"}
-                rel={link.external ? "noopener noreferrer" : undefined}
-              >
-                {link.label}
-              </Link>
+              link.external ? (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="text-white hover:text-gray-300 text-lg font-semibold transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <ScrollLink
+                  key={index}
+                  href={link.href}
+                  className="text-white hover:text-gray-300 text-lg font-semibold transition-colors duration-300"
+                >
+                  {link.label}
+                </ScrollLink>
+              )
             ))}
           </nav>
 
