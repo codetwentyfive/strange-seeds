@@ -53,7 +53,7 @@ export default function UpcomingGigs() {
                 RSVP
               </a>
               <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm bg-transparent border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
-                Tickets
+                Link
               </a>
             </div>
           </div>

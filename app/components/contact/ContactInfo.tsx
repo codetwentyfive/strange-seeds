@@ -11,7 +11,7 @@ export default function ContactInfo() {
       
       <div className="flex flex-col sm:flex-row justify-center items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-8">
         <a href="/downloads/strange_seeds_presskit_en.pdf" className="text-foreground underline text-xl hover:text-gray-300 transition-colors">
-          electronic press kit<br />(ENGLISH)
+          ELECTRONIC PRESS KIT<br />(ENGLISH)
         </a>
         <a href="/downloads/strange_seeds_presskit_de.pdf" className="text-foreground underline text-xl hover:text-gray-300 transition-colors">
           ELECTRONIC PRESS KIT<br />(DEUTSCH)
