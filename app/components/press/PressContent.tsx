@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function PressContent() {
   return (
-    <section className="py-12 bg-background mt-12">
+    <section className="py-12 bg-background">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-3xl font-bold mb-8">Press Information</h1>
         

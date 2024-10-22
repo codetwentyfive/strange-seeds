@@ -5,6 +5,7 @@ interface MobileMenuProps {
 }
 
 const navigationLinks = [
+  { href: "/", label: "Home" },
   { href: "/#gigs", label: "Gigs" },
   { href: "/#music", label: "Music" },
   { href: "/#contact", label: "Contact" },
