@@ -49,10 +49,8 @@ export default function UpcomingGigs() {
               <p className="text-pretty text-gray-600">{gig.date}</p>
             </div>
             <div className="mt-4 flex justify-end space-x-2">
-              <a href={gig.rsvpLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm bg-transparent border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
-                RSVP
-              </a>
-              <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm bg-transparent border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
+     
+              <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm text-black  bg-white  border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
                 Link
               </a>
             </div>
