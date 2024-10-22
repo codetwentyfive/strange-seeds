@@ -9,7 +9,7 @@ export default function EventStructuredData({ gigs }: EventStructuredDataProps) 
     "@context": "https://schema.org",
     "@type": "Event",
     "name": `The Strange Seeds at ${gig.venue}`,
-    "startDate": gig.date, // Note: This should be in ISO 8601 format
+    "startDate": gig.startDate, // Note: This should be in ISO 8601 format
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
     "location": {
@@ -17,7 +17,7 @@ export default function EventStructuredData({ gigs }: EventStructuredDataProps) 
       "name": gig.venue,
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": gig.city,
+        "addressLocality": gig.address.addressLocality,
         "addressCountry": "DE" // Assuming all gigs are in Germany
       }
     },
