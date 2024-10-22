@@ -1,23 +1,59 @@
 [
   {
     "id": 1,
-    "date": "09 November 2024",
+    "name": "The Strange Seeds at Tabakfabrik",
+    "startDate": "2024-11-09T19:00:00+01:00",
+    "endDate": "2024-11-09T23:00:00+01:00",
     "venue": "Tabakfabrik",
-    "city": "Passau",
-    "ticketsLink": "https://mfv-passau.com/veranstaltungen/"
+    "address": {
+      "streetAddress": "Mühltalstraße 10",
+      "addressLocality": "Passau",
+      "postalCode": "94032",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://mfv-passau.com/veranstaltungen/",
+    "priceCurrency": "EUR",
+    "validFrom": "2024-09-01T00:00:00+02:00",
+    "description": "The Strange Seeds live at Tabakfabrik, Passau. Join us for a night of heavy blues rock!",
+    "image": "https://www.thestrangeseeds.com/images/events/tabakfabrik-2024.jpg"
   },
   {
     "id": 2,
-    "date": "16 November 2024",
+    "name": "The Strange Seeds at Café Holler",
+    "startDate": "2024-11-16T19:00:00+01:00",
+    "endDate": "2024-11-17T00:00:00+01:00",
     "venue": "Café Holler",
-    "city": "Deggendorf",
-    "ticketsLink": "https://www.facebook.com/events/452880764411556"
+    "address": {
+      "streetAddress": "Amanstraße 8",
+      "addressLocality": "Deggendorf",
+      "postalCode": "94469",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.facebook.com/events/452880764411556",
+    "priceCurrency": "EUR",
+    "validFrom": "2024-09-15T00:00:00+02:00",
+    "description": "Experience The Strange Seeds live at Café Holler in Deggendorf. An intimate venue for an unforgettable night of music.",
+    "image": "https://www.thestrangeseeds.com/images/events/cafe-holler-2024.jpg"
   },
   {
     "id": 3,
-    "date": "29 November 2024",
+    "name": "The Strange Seeds at Zauberberg",
+    "startDate": "2024-11-29T19:00:00+01:00",
+    "endDate": "2024-11-29T23:00:00+01:00",
     "venue": "Zauberberg",
-    "city": "Passau",
-    "ticketsLink": "https://www.zauberberg-passau.com/events/the-munyks-the-strange-seeds-zauberfabrik-veranstaltet-vom-mfv"
+    "address": {
+      "streetAddress": "Franz-Stockbauer-Weg 1",
+      "addressLocality": "Passau",
+      "postalCode": "94032",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.zauberberg-passau.com/events/the-munyks-the-strange-seeds-zauberfabrik-veranstaltet-vom-mfv",
+    "priceCurrency": "EUR",
+    "validFrom": "2024-10-01T00:00:00+02:00",
+    "description": "The Strange Seeds return to Zauberberg in Passau for a special performance. Don't miss this electrifying show!",
+    "image": "https://www.thestrangeseeds.com/images/events/zauberberg-2024.jpg"
   }
 ]
