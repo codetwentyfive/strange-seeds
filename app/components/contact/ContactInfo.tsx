@@ -7,7 +7,7 @@ export default function ContactInfo() {
       <p><a href="mailto:info@thestrangeseeds.com" className="text-foreground underline text-xl">info@thestrangeseeds.com</a></p>
       
       <h3 className="text-2xl font-semibold mt-4 mb-2">INQUIRIES</h3>
-      <p className="text-xl">Patrick +49 (0) 170 356 255 8</p>
+      <p className="text-xl"> <a href="tel:+491703562558" className="text-foreground underline">Patrick: +49 (0) 170 356 255 8</a></p>
       
       <div className="flex flex-col sm:flex-row justify-center items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-8">
         <a href="/downloads/strange_seeds_presskit_en.pdf" className="text-foreground underline text-xl hover:text-gray-300 transition-colors">
