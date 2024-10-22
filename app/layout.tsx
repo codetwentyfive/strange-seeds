@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Strange Seeds | Official Website",
-    description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and latest news.",
+    description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
     images: ["https://www.thestrangeseeds.com/images/twitter-image.jpg"],
   },
   icons: [
