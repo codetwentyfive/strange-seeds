@@ -6,22 +6,48 @@ const rubikMonoOne = Rubik_Mono_One({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-rubik-mono-one",
+  display: "swap",
 });
 
 const rubikDirt = Rubik_Dirt({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-rubik-dirt",
+  display: "swap",
 });
 
 const rubik = Rubik({
   subsets: ["latin"],
   variable: "--font-rubik",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Strange Seeds",
-  description: "Official website of Strange Seeds",
+  title: "The Strange Seeds | Official Website",
+  description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
+  keywords: "The Strange Seeds, band, music, rock, gigs, concerts, merch",
+  openGraph: {
+    title: "The Strange Seeds | Official Website",
+    description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
+    url: "https://www.thestrangeseeds.com",
+    siteName: "The Strange Seeds",
+    images: [
+      {
+        url: "https://www.thestrangeseeds.com/images/band-name.png",
+        width: 1200,
+        height: 630,
+        alt: "The Strange Seeds Band",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Strange Seeds | Official Website",
+    description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
+    images: ["https://www.thestrangeseeds.com/images/band-name.png"],
+  },
   icons: [
     { rel: "icon", url: "/favicon.ico" },
     { rel: "icon", url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -29,8 +55,11 @@ export const metadata: Metadata = {
     { rel: "apple-touch-icon", url: "/apple-touch-icon.png" },
     { rel: "manifest", url: "/site.webmanifest" },
   ],
-  themeColor: "#ffffff", // Set this to match your site's theme color
+  themeColor: "#0a0a0a",
   viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+  alternates: {
+    canonical: "https://www.thestrangeseeds.com",
+  },
 };
 
 export default function RootLayout({
