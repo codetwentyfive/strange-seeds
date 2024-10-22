@@ -139,14 +139,14 @@ export default function Header() {
           <div className="hidden sm:block">
             <Image
               src="/images/band.jpg"
-              alt="Band Background"
+              alt="Band background"
               fill
               sizes="100vw"
-              style={{ objectFit: "cover", objectPosition: "top" }}
+              style={{ objectFit: "cover", objectPosition: "center top" }}
               quality={100}
               priority
-              className="sm:object-contain"
             />
+            <div className="absolute inset-0 bg-black bg-opacity-10"></div>
           </div>
           <div className="block sm:hidden">
             <Image
@@ -164,9 +164,27 @@ export default function Header() {
       )}
 
       <div className={`relative z-10 flex flex-col h-full`}>
-        <div className="flex justify-end items-center w-full p-4 bg-transparent">
+        <div className="flex justify-between items-center w-full p-4 bg-transparent">
+          {/* Band Logo */}
+          <Link href="/" className={`flex-shrink-0 pl-5 ${isScrolled || !isHomePage ? 'hidden md:block' : 'hidden md:block'}`}>
+            <Image
+              src="/icons/logo-icon.png"
+              alt="Band Logo"
+              width={80}
+              height={80}
+              className="transition-transform duration-300 ease-in-out hover:scale-110 hidden lg:block"
+            />
+            <Image
+              src="/icons/logo-icon.png"
+              alt="Band Logo"
+              width={60}
+              height={60}
+              className="transition-transform duration-300 ease-in-out hover:scale-110 hidden md:block lg:hidden"
+            />
+          </Link>
+
           {/* Navigation for larger screens */}
-          <nav className="hidden md:flex space-x-4 pr-5">
+          <nav className="hidden md:flex justify-end space-x-4 pr-5">
             {navigationLinks.map((link, index) => (
               link.external ? (
                 <a
@@ -189,20 +207,21 @@ export default function Header() {
               )
             ))}
           </nav>
-
           {/* Hamburger Menu for Mobile */}
           <button
-            className={`md:hidden text-black hover:text-gray-700 text-3xl p-2 bg-white rounded-full ${isScrolled || !isHomePage ? 'block' : 'hidden'}`}
+            className={`z-50 md:hidden text-black hover:text-gray-700 text-3xl p-2 bg-white rounded-full fixed top-4 right-4 transition-opacity duration-300 ease-in-out ${isScrolled || !isHomePage ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
-            {isMenuOpen ? '✖' : '☰'}
+            <span className={`transition-transform duration-300 ease-in-out ${isMenuOpen ? 'rotate-180' : 'rotate-0'} inline-block`}>
+              {isMenuOpen ? '✖' : '☰'}
+            </span>
           </button>
         </div>
 
-        {isMenuOpen && (
+        <div className={`fixed inset-0 z-40 transition-opacity duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <MobileMenu onClose={() => setIsMenuOpen(false)} />
-        )}
+        </div>
 
         {isHomePage && !isScrolled && (
           <div className="flex-grow flex flex-col items-center justify-center pb-8">
