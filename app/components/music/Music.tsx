@@ -20,7 +20,7 @@ export default function Music() {
       <div className="space-y-12 max-w-3xl mx-auto w-full">
         {videos.map((video) => (
           <div key={video.id}>
-            <h3 className="font-display text-3xl sm:text-4xl mb-4 text-center">{video.title}</h3>
+            <h3 className="font-display text-3xl font-bold  sm:text-4xl mb-4 text-center">{video.title}</h3>
             <YouTubeEmbed videoId={video.id} />
           </div>
         ))}

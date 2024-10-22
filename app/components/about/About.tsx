@@ -87,9 +87,9 @@ export default function About() {
           (dr.), Valentin Michetschläger (org.), Patrick Knödlseder (git.) and
           Florian Hackl (voc.,b), deliver steady heavy blues rock out on the
           road . Since their inception, they’ve recorded their debut album
-          "Plant", "The Raw Takes"- EP and their second studio album "Grow", to
-          be released in early Summer 2024.
-          <br /> 
+          &quot;Plant&quot;, &quot;The Raw Takes&quot;- EP and their second
+          studio album &quot;Grow&quot;, to be released in early Summer 2024.
+          <br />
           <br />
           Soundwise, The Strange Seeds merge heavy drum rhythms with thunderlike
           basslines and sweet keys with roaring guitar solos, underscored it all
