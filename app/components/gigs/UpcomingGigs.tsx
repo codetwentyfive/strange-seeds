@@ -1,41 +1,14 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { Gig } from '../types/gig';
 
-interface Gig {
-  id: number;
-  date: string;
-  venue: string;
-  city: string;
-  rsvpLink: string;
-  ticketsLink: string;
+interface UpcomingGigsProps {
+  gigs: Gig[];
 }
 
-export default function UpcomingGigs() {
-  const [gigs, setGigs] = useState<Gig[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    // Fetch upcoming gigs data
-    fetch('/api/gigs/upcoming')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setGigs(data);
-        setIsLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching gigs:', error);
-        setIsLoading(false);
-      });
-  }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
+export default function UpcomingGigs({ gigs }: UpcomingGigsProps) {
+  if (!gigs || gigs.length === 0) {
+    return <div>No upcoming gigs at the moment.</div>;
   }
 
   return (
@@ -49,8 +22,7 @@ export default function UpcomingGigs() {
               <p className="text-pretty text-gray-600">{gig.date}</p>
             </div>
             <div className="mt-4 flex justify-end space-x-2">
-     
-              <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm text-black  bg-white  border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
+              <a href={gig.ticketsLink} target="_blank" rel="noopener noreferrer" className="px-3 py-1 text-sm text-black bg-white border border-foreground text-foreground rounded-full hover:bg-foreground hover:text-background transition duration-300 ease-in-out">
                 Link
               </a>
             </div>
