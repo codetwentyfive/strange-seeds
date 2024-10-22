@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "The Strange Seeds",
     images: [
       {
-        url: "https://www.thestrangeseeds.com/images/band-name.png",
+        url: "https://www.thestrangeseeds.com/images/twitter-image.jpg",
         width: 1200,
         height: 630,
         alt: "The Strange Seeds Band",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "The Strange Seeds | Official Website",
-    description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
-    images: ["https://www.thestrangeseeds.com/images/band-name.png"],
+    description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and latest news.",
+    images: ["https://www.thestrangeseeds.com/images/twitter-image.jpg"],
   },
   icons: [
     { rel: "icon", url: "/favicon.ico" },
