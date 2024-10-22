@@ -1,50 +1,23 @@
 [
   {
     "id": 1,
-    "date": "2024-05-20",
-    "venue": "The Mos Eisley Cantina",
-    "city": "New York",
-    "rsvpLink": "https://example.com/rsvp1",
-    "ticketsLink": "https://example.com/tickets1"
+    "date": "09 November 2024",
+    "venue": "Tabakfabrik",
+    "city": "Passau",
+    "ticketsLink": "https://mfv-passau.com/veranstaltungen/"
   },
   {
     "id": 2,
-    "date": "2024-06-15",
-    "venue": "The Upside Down",
-    "city": "Los Angeles",
-    "rsvpLink": "https://example.com/rsvp2",
-    "ticketsLink": "https://example.com/tickets2"
+    "date": "16 November 2024",
+    "venue": "Café Holler",
+    "city": "Deggendorf",
+    "ticketsLink": "https://www.facebook.com/events/452880764411556"
   },
   {
     "id": 3,
-    "date": "2024-07-10",
-    "venue": "Hogwarts Great Hall",
-    "city": "Chicago",
-    "rsvpLink": "https://example.com/rsvp3",
-    "ticketsLink": "https://example.com/tickets3"
-  },
-  {
-    "id": 4,
-    "date": "2024-08-05",
-    "venue": "The Holodeck",
-    "city": "San Francisco",
-    "rsvpLink": "https://example.com/rsvp4",
-    "ticketsLink": "https://example.com/tickets4"
-  },
-  {
-    "id": 5,
-    "date": "2024-09-12",
-    "venue": "The Batcave",
-    "city": "Boston",
-    "rsvpLink": "https://example.com/rsvp5",
-    "ticketsLink": "https://example.com/tickets5"
-  },
-  {
-    "id": 6,
-    "date": "2024-10-20",
-    "venue": "The TARDIS",
-    "city": "Seattle",
-    "rsvpLink": "https://example.com/rsvp6",
-    "ticketsLink": "https://example.com/tickets6"
+    "date": "29 November 2024",
+    "venue": "Zauberberg",
+    "city": "Passau",
+    "ticketsLink": "https://www.zauberberg-passau.com/events/the-munyks-the-strange-seeds-zauberfabrik-veranstaltet-vom-mfv"
   }
 ]
