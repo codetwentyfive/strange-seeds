@@ -1,47 +1,9 @@
 [
   {
     "id": 1,
-    "name": "The Strange Seeds at Tabakfabrik",
-    "startDate": "2024-11-09T19:00:00+01:00",
-    "endDate": "2024-11-09T23:00:00+01:00",
-    "venue": "Tabakfabrik",
-    "address": {
-      "streetAddress": "Mühltalstraße 10",
-      "addressLocality": "Passau",
-      "postalCode": "94032",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "ticketsLink": "https://mfv-passau.com/veranstaltungen/",
-    "priceCurrency": "EUR",
-    "validFrom": "2024-09-01T00:00:00+02:00",
-    "description": "The Strange Seeds live at Tabakfabrik, Passau. Join us for a night of heavy blues rock!",
-    "image": "https://www.thestrangeseeds.com/images/events/tabakfabrik-2024.jpg"
-  },
-  {
-    "id": 2,
-    "name": "The Strange Seeds at Café Holler",
-    "startDate": "2024-11-16T19:00:00+01:00",
-    "endDate": "2024-11-17T00:00:00+01:00",
-    "venue": "Café Holler",
-    "address": {
-      "streetAddress": "Amanstraße 8",
-      "addressLocality": "Deggendorf",
-      "postalCode": "94469",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "ticketsLink": "https://www.facebook.com/events/452880764411556",
-    "priceCurrency": "EUR",
-    "validFrom": "2024-09-15T00:00:00+02:00",
-    "description": "Experience The Strange Seeds live at Café Holler in Deggendorf. An intimate venue for an unforgettable night of music.",
-    "image": "https://www.thestrangeseeds.com/images/events/cafe-holler-2024.jpg"
-  },
-  {
-    "id": 3,
     "name": "The Strange Seeds at Zauberberg",
-    "startDate": "2024-11-29T19:00:00+01:00",
-    "endDate": "2024-11-29T23:00:00+01:00",
+    "startDate": "2025-01-11T19:00:00+01:00",
+    "endDate": "2025-01-11T23:00:00+01:00",
     "venue": "Zauberberg",
     "address": {
       "streetAddress": "Franz-Stockbauer-Weg 1",
@@ -50,10 +12,162 @@
       "addressRegion": "Bayern",
       "addressCountry": "DE"
     },
-    "ticketsLink": "https://www.zauberberg-passau.com/events/the-munyks-the-strange-seeds-zauberfabrik-veranstaltet-vom-mfv",
+    "ticketsLink": "https://www.zauberberg-passau.com/events/rock-hilft-dem-frauenhaus",
     "priceCurrency": "EUR",
-    "validFrom": "2024-10-01T00:00:00+02:00",
-    "description": "The Strange Seeds return to Zauberberg in Passau for a special performance. Don't miss this electrifying show!",
-    "image": "https://www.thestrangeseeds.com/images/events/zauberberg-2024.jpg"
+    "validFrom": "2024-12-01T00:00:00+01:00",
+    "description": "The Strange Seeds live at Zauberberg, Passau.",
+    "image": "https://www.thestrangeseeds.com/images/events/zauberberg-2025.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Strange Seeds at Strom",
+    "startDate": "2025-01-17T19:00:00+01:00",
+    "endDate": "2025-01-17T23:00:00+01:00",
+    "venue": "Strom",
+    "address": {
+      "streetAddress": "Lindwurmstraße 88",
+      "addressLocality": "Munich",
+      "postalCode": "80337",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.ticketmaster.de/artist/elvana-tickets/987581?",
+    "priceCurrency": "EUR",
+    "validFrom": "2024-12-17T00:00:00+01:00",
+    "description": "The Strange Seeds live at Strom, Munich.",
+    "image": "https://www.thestrangeseeds.com/images/events/strom-2025.jpg"
+  },
+  {
+    "id": 3,
+    "name": "The Strange Seeds at AC Klub",
+    "startDate": "2025-02-08T19:00:00+01:00",
+    "endDate": "2025-02-08T23:00:00+01:00",
+    "venue": "AC Klub",
+    "address": {
+      "streetAddress": "Československé armády 216",
+      "addressLocality": "Hradec Králové",
+      "postalCode": "500 03",
+      "addressRegion": "",
+      "addressCountry": "CZ"
+    },
+    "ticketsLink": "http://acklubhk.cz/rubrika/program/",
+    "priceCurrency": "CZK",
+    "validFrom": "2025-01-08T00:00:00+01:00",
+    "description": "The Strange Seeds live at AC Klub, Hradec Králové.",
+    "image": "https://www.thestrangeseeds.com/images/events/ac-klub-2025.jpg"
+  },
+  {
+    "id": 4,
+    "name": "The Strange Seeds at Chapeau Rouge",
+    "startDate": "2025-02-10T19:00:00+01:00",
+    "endDate": "2025-02-10T23:00:00+01:00",
+    "venue": "Chapeau Rouge",
+    "address": {
+      "streetAddress": "Jakubská 2",
+      "addressLocality": "Prague",
+      "postalCode": "110 00",
+      "addressRegion": "",
+      "addressCountry": "CZ"
+    },
+    "ticketsLink": "https://www.chapeaurouge.cz/program/underground/2-2025/15758-the-strange-seeds-live-concert/",
+    "priceCurrency": "CZK",
+    "validFrom": "2025-01-10T00:00:00+01:00",
+    "description": "The Strange Seeds live at Chapeau Rouge, Prague.",
+    "image": "https://www.thestrangeseeds.com/images/events/chapeau-rouge-2025.jpg"
+  },
+  {
+    "id": 5,
+    "name": "The Strange Seeds at Club VEB",
+    "startDate": "2025-02-12T19:00:00+01:00",
+    "endDate": "2025-02-12T23:00:00+01:00",
+    "venue": "Club VEB",
+    "address": {
+      "streetAddress": "Phoenixstraße 12",
+      "addressLocality": "Hildesheim",
+      "postalCode": "31137",
+      "addressRegion": "Niedersachsen",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.facebook.com/clubveb/",
+    "priceCurrency": "EUR",
+    "validFrom": "2025-01-12T00:00:00+01:00",
+    "description": "The Strange Seeds live at Club VEB, Hildesheim.",
+    "image": "https://www.thestrangeseeds.com/images/events/club-veb-2025.jpg"
+  },
+  {
+    "id": 6,
+    "name": "The Strange Seeds at Stellwerk",
+    "startDate": "2025-02-14T19:00:00+01:00",
+    "endDate": "2025-02-14T23:00:00+01:00",
+    "venue": "Stellwerk",
+    "address": {
+      "streetAddress": "Harkortstraße 125",
+      "addressLocality": "Hamburg",
+      "postalCode": "22765",
+      "addressRegion": "Hamburg",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.tixforgigs.com/Event/61356",
+    "priceCurrency": "EUR",
+    "validFrom": "2025-01-14T00:00:00+01:00",
+    "description": "The Strange Seeds live at Stellwerk, Hamburg.",
+    "image": "https://www.thestrangeseeds.com/images/events/stellwerk-2025.jpg"
+  },
+  {
+    "id": 7,
+    "name": "The Strange Seeds at Lauter Speicher",
+    "startDate": "2025-02-17T19:00:00+01:00",
+    "endDate": "2025-02-17T23:00:00+01:00",
+    "venue": "Lauter Speicher",
+    "address": {
+      "streetAddress": "An der Katharinenkirche 1",
+      "addressLocality": "Osnabrück",
+      "postalCode": "49074",
+      "addressRegion": "Niedersachsen",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.facebook.com/lauter.speicher.osnabrueck",
+    "priceCurrency": "EUR",
+    "validFrom": "2025-01-17T00:00:00+01:00",
+    "description": "The Strange Seeds live at Lauter Speicher, Osnabrück.",
+    "image": "https://www.thestrangeseeds.com/images/events/lauter-speicher-2025.jpg"
+  },
+  {
+    "id": 8,
+    "name": "The Strange Seeds at MTC Club",
+    "startDate": "2025-02-19T19:00:00+01:00",
+    "endDate": "2025-02-19T23:00:00+01:00",
+    "venue": "MTC Club",
+    "address": {
+      "streetAddress": "Zülpicher Straße 10",
+      "addressLocality": "Cologne",
+      "postalCode": "50674",
+      "addressRegion": "Nordrhein-Westfalen",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.mtc-cologne.de/live-shows",
+    "priceCurrency": "EUR",
+    "validFrom": "2025-01-19T00:00:00+01:00",
+    "description": "The Strange Seeds live at MTC Club, Cologne.",
+    "image": "https://www.thestrangeseeds.com/images/events/mtc-club-2025.jpg"
+  },
+  {
+    "id": 9,
+    "name": "The Strange Seeds at Alte Mälzerei",
+    "startDate": "2025-02-27T19:00:00+01:00",
+    "endDate": "2025-02-27T23:00:00+01:00",
+    "venue": "Alte Mälzerei",
+    "address": {
+      "streetAddress": "Galgenbergstraße 20",
+      "addressLocality": "Regensburg",
+      "postalCode": "93053",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "ticketsLink": "https://www.alte-maelzerei.de/de/prog.php",
+    "priceCurrency": "EUR",
+    "validFrom": "2025-01-27T00:00:00+01:00",
+    "description": "The Strange Seeds live at Alte Mälzerei, Regensburg.",
+    "image": "https://www.thestrangeseeds.com/images/events/alte-maelzerei-2025.jpg"
   }
 ]
