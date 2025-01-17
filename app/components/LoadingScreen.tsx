@@ -10,14 +10,20 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // Wait for the window load event to ensure images are loaded
+    const handleLoad = () => {
       setIsVisible(false);
       setTimeout(() => {
         onLoadingComplete?.();
-      }, 50);
-    }, 100);
+      }, 200);
+    };
 
-    return () => clearTimeout(timer);
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
   }, [onLoadingComplete]);
 
   if (!isVisible) return null;
