@@ -1,6 +1,5 @@
 import { Rubik_Mono_One, Rubik_Dirt, Rubik } from "next/font/google";
 import "./globals.css";
-import ClientLayout from "./components/ClientLayout";
 import type { Metadata } from 'next';
 
 const rubikMonoOne = Rubik_Mono_One({
@@ -71,9 +70,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rubikMonoOne.variable} ${rubikDirt.variable} ${rubik.variable} font-sans antialiased bg-background text-foreground`}>
-        <ClientLayout>
-          {children}
-        </ClientLayout>
+        <div 
+          className="fixed inset-0 -z-10"
+          style={{
+            backgroundImage: 'url("/images/bg-texture.jpg")',
+            backgroundRepeat: 'repeat',
+            backgroundSize: 'auto',
+            opacity: 0.1,
+          }}
+        />
+        {children}
       </body>
     </html>
   );
