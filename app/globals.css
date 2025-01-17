@@ -26,22 +26,50 @@ body {
   position: relative;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/bg-texture.jpg');
-  background-repeat: repeat;
-  background-size: auto;
-  opacity: 0.1;
-  z-index: -1;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@keyframes textShadowPulse {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes glitchShift {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
   }
 }

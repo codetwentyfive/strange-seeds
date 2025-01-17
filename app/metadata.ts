@@ -1,27 +1,4 @@
-import { Rubik_Mono_One, Rubik_Dirt, Rubik } from "next/font/google";
-import "./globals.css";
-import ClientLayout from "./components/ClientLayout";
-import type { Metadata } from 'next';
-
-const rubikMonoOne = Rubik_Mono_One({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-rubik-mono-one",
-  display: "swap",
-});
-
-const rubikDirt = Rubik_Dirt({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-rubik-dirt",
-  display: "swap",
-});
-
-const rubik = Rubik({
-  subsets: ["latin"],
-  variable: "--font-rubik",
-  display: "swap",
-});
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Strange Seeds | Official Website",
@@ -61,20 +38,4 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.thestrangeseeds.com",
   },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className={`${rubikMonoOne.variable} ${rubikDirt.variable} ${rubik.variable} font-sans antialiased bg-background text-foreground`}>
-        <ClientLayout>
-          {children}
-        </ClientLayout>
-      </body>
-    </html>
-  );
-}
+}; 
