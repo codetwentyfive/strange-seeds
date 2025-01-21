@@ -11,6 +11,17 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex space-x-6">
+          <div className="text-sm text-gray-400">
+          Developed by{" "}
+          <Link 
+            href="https://chingis.dev" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 hover:bg-gradient-to-r hover:from-red-500 hover:via-yellow-500 hover:via-green-500 hover:via-blue-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent"
+          >
+            Chingis Zwecker E.
+          </Link>
+        </div>
             <Link 
               href="/imprint" 
               className="text-sm text-gray-400 hover:text-white transition-colors"

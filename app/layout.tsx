@@ -67,7 +67,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.thestrangeseeds.com",
   },
-  authors: [{ name: 'The Strange Seeds' }],
+  authors: [
+    {
+      name: "Chingis Zwecker E.",
+      url: "https://chingis.dev",
+    }
+  ],
+  creator: "Chingis Zwecker E.",
   verification: {
     google: 'google47c345b6949ecceb',
   },
