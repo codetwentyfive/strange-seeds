@@ -22,6 +22,12 @@ const rubik = Rubik({
   display: "swap",
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  shrinkToFit: 'no',
+};
+
 export const metadata: Metadata = {
   title: "The Strange Seeds | Official Website",
   description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
@@ -56,7 +62,6 @@ export const metadata: Metadata = {
     { rel: "manifest", url: "/site.webmanifest" },
   ],
   themeColor: "#0a0a0a",
-  viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
   alternates: {
     canonical: "https://www.thestrangeseeds.com",
   },

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, Suspense } from "react";
+import Image from "next/image";
 import LoadingScreen from "./LoadingScreen";
 
 interface ClientLayoutProps {
@@ -9,15 +10,18 @@ interface ClientLayoutProps {
 
 function BackgroundTexture() {
   return (
-    <div 
-      className="fixed inset-0 -z-10"
-      style={{
-        backgroundImage: 'url("/images/bg-texture.jpg")',
-        backgroundRepeat: 'repeat',
-        backgroundSize: 'auto',
-        opacity: 0.1,
-      }}
-    />
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      <Image
+        src="/images/bg-texture.webp"
+        alt="Background texture"
+        fill
+        quality={50}
+        priority={false}
+        sizes="100vw"
+        className="opacity-10"
+        style={{ objectFit: "cover" }}
+      />
+    </div>
   );
 }
 
