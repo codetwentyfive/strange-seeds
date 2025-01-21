@@ -30,6 +30,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.thestrangeseeds.com'),
   title: "The Strange Seeds | Official Website",
   description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
   keywords: "The Strange Seeds, band, music, rock, gigs, concerts, merch",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "The Strange Seeds",
     images: [
       {
-        url: "https://www.thestrangeseeds.com/images/twitter-image.jpg",
+        url: "https://www.thestrangeseeds.com/images/twitter-image.webp",
         width: 1200,
         height: 630,
         alt: "The Strange Seeds Band",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Strange Seeds | Official Website",
     description: "Official website of the band The Strange Seeds. Discover our music, upcoming gigs, and merch.",
-    images: ["https://www.thestrangeseeds.com/images/twitter-image.jpg"],
+    images: ["https://www.thestrangeseeds.com/images/twitter-image.webp"],
   },
   icons: [
     { rel: "icon", url: "/favicon.ico" },
@@ -66,6 +67,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.thestrangeseeds.com",
   },
+  authors: [{ name: 'The Strange Seeds' }],
+  verification: {
+    google: 'google47c345b6949ecceb',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  applicationName: 'The Strange Seeds',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'The Strange Seeds',
+  },
+  other: {
+    'google-site-verification': 'google47c345b6949ecceb',
+  },
 };
 
 export default function RootLayout({
@@ -75,11 +99,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
+      </head>
       <body className={`${rubikMonoOne.variable} ${rubikDirt.variable} ${rubik.variable} font-sans antialiased bg-background text-foreground`}>
         <div 
           className="fixed inset-0 -z-10"
           style={{
-            backgroundImage: 'url("/images/bg-texture.jpg")',
+            backgroundImage: 'url("/images/bg-texture.webp")',
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto',
             opacity: 0.1,
