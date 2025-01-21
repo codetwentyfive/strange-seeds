@@ -35,7 +35,7 @@ export default function About() {
             currentImageIndex === 0 ? "opacity-100" : "opacity-0"
           }`}
           priority
-          quality={75}
+          quality={100}
           loading="eager"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
@@ -48,7 +48,7 @@ export default function About() {
           className={`rounded-3xl shadow object-cover transition-opacity duration-500 ${
             currentImageIndex === 1 ? "opacity-100" : "opacity-0"
           }`}
-          quality={75}
+          quality={100}
           loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
@@ -61,7 +61,7 @@ export default function About() {
           className={`rounded-3xl shadow object-cover transition-opacity duration-500 ${
             currentImageIndex === 2 ? "opacity-100" : "opacity-0"
           }`}
-          quality={75}
+          quality={100}
           loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
@@ -74,7 +74,7 @@ export default function About() {
           className={`rounded-3xl shadow object-cover transition-opacity duration-500 ${
             currentImageIndex === 3 ? "opacity-100" : "opacity-0"
           }`}
-          quality={75}
+          quality={100}
           loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
@@ -87,12 +87,14 @@ export default function About() {
           className={`rounded-3xl shadow object-cover transition-opacity duration-500 ${
             currentImageIndex === 4 ? "opacity-100" : "opacity-0"
           }`}
-          quality={75}
+          quality={100}
           loading="lazy"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVigAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx0fHRsdHSIeHx8dIigjJCUmJSQkIiYoLS0tKCEiMkExMC47PDw/PUJFRUVFRUVFRUb/2wBDARUXFyAeIB4gHh4iIB4jIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
+   
+
 
         <button
           onClick={handlePrevImage}
